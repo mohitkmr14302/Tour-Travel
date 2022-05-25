@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TravelExpress</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    .nav_bar {
+        /* background-color: aqua; */
+        z-index: 1;
+    }
+
+    .nav_bar {
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        z-index: 5;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav_ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_li a {
+        text-decoration: none;
+        color: white;
+        font-size: larger;
+    }
+
+    .nav_li {
+        list-style: none;
+        margin: 1em;
+    }
+
+    #myVideo {
+        /* position: relative;
+        right: 0;
+        top: 0;
+        min-width: 100vw;
+        min-height: 100vh; */
+        position: relative;
+        right: 0;
+        opacity: 0.8;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .mid_heading {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        align-items: center;
+        width: 100vw;
+        font-size: 2em;
+        color: white;
+    }
+
+    .searchbtn {
+        width: 20em;
+        height: 3em;
+        border-radius: 45px
+    }
+
+    ::placeholder {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .heading1 {
+        font-size: 2em;
+    }
+
+    .heading2 {
+        font-size: 1em;
+    }
+
+    .mid_heading2 {
+            display: flex;
+    flex-direction: column;
+    /* position: static; */
+    align-items: center;
+    /* width: 100vw; */
+    margin: 1em;
+    font-size: 1em;
+        /* font-size: 2em; */
+        /* color: white; */
+    }
+
+    .citygroup {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        display: inline-block;
+        width: 45%;
+        /* border: 2px solid green; */
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .group {
+      display: flex;
+      justify-content: space-evenly;
+    margin: 20px 2px;
+    background-color: whitesmoke;
+    }
+
+    .group div {
+        display: inline;
+    }
+
+    .detail span {
+        font-weight: 560;
+        font-size: 30px;
+         margin: 6px 1em;
+        /* padding: 1em; */
+    }
+
+    .detail p {
+           margin: 6px 2em;
+    }
+
+    .detail button {
+       float: right;
+    display: inline;
+    width: 8em;
+    height: 3em;
+    color: white;
+    background-color: yellowgreen;
+    border-radius: 4px;
+        
+    }
+    .lower{
+        background-color: steelblue;
+    }
+    .footer{
+        display: flex;
+    /* background-color: red; */
+    justify-content: space-around;
+    }
+    .ddetail{
+       width: 30%;
+       color: white;
+    /* background-color: blue; */
+    margin: 15px;
+    padding: 40px
+    }
+    .aboutus,.NAVIGATE{
+        font-weight: 500;
+        margin: 5px;
+    }
+    .data{
+        margin: 15px 5px;
+    }
+    p.add {
+    margin: 2px;
+    padding: 1px;
+}
+.listlast li{
+        list-style: none;
+         margin: 11px 3px;
+        cursor: pointer;
+}
+.mohit{
+    height: 30px;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+</style>
+
+<body>
+    <!-- <video autoplay muted loop id="myVideo">
+            <source
+                src="https://media.istockphoto.com/videos/the-most-extravagant-travel-destination-video-id1282703294"
+                type="video/mp4">
+        </video> -->
+    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/slider/slider.jpg" alt="" id="myVideo">
+    <div class="nav_bar">
+        <nav class="navbar">
+            <div class="heading">
+                <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/logo/logo-2.png" alt="">
+            </div>
+            <div class="nav_div">
+                <ul class="nav_ul">
+                    <li class="nav_li"> <a href="#">HOME</a></li>
+                    <li class="nav_li"> <a href="#">TOURS</a></li>
+                    <li class="nav_li"> <a href="#">HOTELS</a></li>
+                    <li class="nav_li"> <a href="#">PAKAGE</a></li>
+                    <li class="nav_li"> <a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="mid_heading">
+        <h1 class="heading1">KEEP YOUR WORLD IN YOUR HAND</h1>
+        <h1 class="heading2">START YOUR TRIP NOW</h1>
+        <form action="">
+            <input class="searchbtn" type="text" name="" id="" placeholder="Search your desitination">
+        </form>
+    </div>
+    <div class="mid_heading2">
+        <h1>EXPLORE MORE POPULAR PLACE</h1>
+        <h4>1995 WE DENOUNCE WITH RIGHTEOUS INDIGNATION.</h4>
+    </div>
+    <div class="citygroup">
+        <div class="container">
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-5.jpg"
+                        alt="">
+                </div>
+                <div class="detail">
+                    <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-6.jpg"
+                        alt="">
+                </div>
+                <div class="detail">
+                    <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-7.jpg"
+                        alt="">
+                </div>
+               <div class="detail">
+                     <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-8.jpg"
+                        alt="">
+                </div>
+               <div class="detail">
+                      <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-1.jpg"
+                        alt="">
+                </div>
+               <div class="detail">
+                      <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-2.jpg"
+                        alt="">
+                </div>
+                <div class="detail">
+                      <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-3.jpg"
+                        alt="">
+                </div>
+               <div class="detail">
+                      <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+            <div class="group">
+                <div>
+                    <img src="https://www.devsnews.com/template/travelexpress/travelexpress/img/package/pp-4.jpg"
+                        alt="">
+                </div>
+                <div class="detail">
+                      <span>LOURVE FORT MUSEUM </span>
+                    <p>Victoria Falls, 5 Days, 4 Night Tour</p>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+           
+            </div>
+        </div>
+
+    </div>
+    <!-- <section class="footer"> -->
+            <div class="lower">
+            <div class="footer">
+                <div class="ddetail">
+                <p class="aboutus">
+                    ABOUT US
+                </p>
+                <p class="data">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic adipisci in quos consequatur sint est labore eaque fugiat animi 
+                </p>
+                    
+               <p  class="add"> 42 Tailstoi Town, 5248 MT </p>
+               <p  class="add"> Dream City,India </p>
+               <p class="add"> (+91) 9798 719 126 </p>
+               <p class="add"> mohitkmr14302@gmail.com </p>
+            </div>
+            <div class="ddetail">
+                <p class="NAVIGATE">NAVIGATE</p>
+                <ul class="listlast">
+                    <li><i class="fas fa-caret-right" id="hello"></i>Home </li>
+                    <li>About Us</li>
+                    <li>Destination</li>
+                    <li>How It Works</li>
+                    <li>Contact Us</li>
+                </ul>
+
+            </div>
+            <div class="ddetail">
+                <p class="NAVIGATE">IMFORMATION</p>
+
+                <ul class="listlast">
+                    <li>Home </li>
+                    <li>About Us</li>
+                    <li>Destination</li>
+                    <li>How It Works</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            </div>
+          
+           <hr>
+           <p class="mohit">Created By:Mohit Kumar</p>
+         </div>
+    <!-- </section> -->
+
+</body>
+
+</html>
